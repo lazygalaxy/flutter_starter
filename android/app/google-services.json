@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "408591495213",
+    "firebase_url": "https://lazygalaxy-test.firebaseio.com",
+    "project_id": "lazygalaxy-test",
+    "storage_bucket": "lazygalaxy-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408591495213:android:9f52fe954451320d",
+        "android_client_info": {
+          "package_name": "com.lazygalaxy.flutter_starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408591495213-opqtc0olg3kdisc5gdp7c6cu50hgo6ba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3Ba5TNrAtrrUbY6RbgI68OXrMHXFApyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408591495213-opqtc0olg3kdisc5gdp7c6cu50hgo6ba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

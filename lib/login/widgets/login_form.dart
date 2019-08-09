@@ -7,10 +7,8 @@ import 'package:flutter_starter/auth/auth_bloc/auth_bloc.dart';
 import 'package:flutter_starter/auth/auth_bloc/auth_event.dart';
 import 'package:flutter_starter/login/bloc/login_event.dart';
 import 'package:flutter_starter/login/widgets/login_button.dart';
-import 'package:flutter_starter/login/widgets/google_login_button.dart';
-import 'package:flutter_starter/login/widgets/create_account_button.dart';
-
-
+import 'package:flutter_starter/login/widgets/login_google_button.dart';
+import 'package:flutter_starter/login/widgets/login_create_account_button.dart';
 
 class LoginForm extends StatefulWidget {
   final AuthRepository _authRepository;
@@ -129,7 +127,7 @@ class _LoginFormState extends State<LoginForm> {
                               : null,
                         ),
                         GoogleLoginButton(),
-                        CreateAccountButton(authRepository: _authRepository),
+                        LoginCreateAccountButton(authRepository: _authRepository),
                       ],
                     ),
                   ),

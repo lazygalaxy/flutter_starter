@@ -6,7 +6,7 @@ import 'package:flutter_starter/todos/bloc/todos_state.dart';
 import 'package:flutter_starter/todos/bloc/todos_event.dart';
 
 //screens
-import 'package:flutter_starter/todos/widgets/add_edit_screen.dart';
+import 'package:flutter_starter/todos/widgets/todos_add_edit_screen.dart';
 
 
 class DetailsScreen extends StatelessWidget {
@@ -97,7 +97,7 @@ class DetailsScreen extends StatelessWidget {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) {
-                          return AddEditScreen(
+                          return TodosAddEditScreen(
                             onSave: (task, note) {
                               todosBloc.dispatch(
                                 UpdateTodo(

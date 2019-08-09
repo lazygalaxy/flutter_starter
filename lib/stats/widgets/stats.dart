@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_starter/stats/stats_bloc/stats_bloc.dart';
 import 'package:flutter_starter/stats/stats_bloc/stats_state.dart';
-import 'package:flutter_starter/widgets/loading_indicator_widget.dart';
+import 'package:flutter_starter/widgets/loading_indicator.dart';
 
 class Stats extends StatelessWidget {
   @override
@@ -11,7 +11,7 @@ class Stats extends StatelessWidget {
     return BlocBuilder<StatsBloc, StatsState>(
       builder: (context, state) {
         if (state is StatsLoading) {
-          return LoadingIndicatorWidget();
+          return LoadingIndicator();
         } else if (state is StatsLoaded) {
           return Center(
             child: Column(

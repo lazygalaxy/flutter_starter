@@ -1,15 +1,36 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:flutter_starter/todos/todo.dart';
+import 'package:flutter_starter/todos/bloc/todos_bloc.dart';
+import 'package:flutter_starter/todos/bloc/todos_event.dart';
 
 typedef OnSaveCallback = Function(String task, String note);
 
-class AddEditScreen extends StatefulWidget {
+class TodosAddEditRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final todosBloc = BlocProvider.of<TodosBloc>(context);
+    return TodosAddEditScreen(
+      onSave: (task, note) {
+        todosBloc.dispatch(
+          AddTodo(Todo(task, note: note)),
+        );
+      },
+      isEditing: false,
+    );
+  }
+
+  Widget getScreen() {
+  }
+}
+
+class TodosAddEditScreen extends StatefulWidget {
   final bool isEditing;
   final OnSaveCallback onSave;
   final Todo todo;
 
-  AddEditScreen({
+  TodosAddEditScreen({
     Key key,
     @required this.onSave,
     @required this.isEditing,
@@ -17,10 +38,10 @@ class AddEditScreen extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _AddEditScreenState createState() => _AddEditScreenState();
+  _TodosAddEditScreenState createState() => _TodosAddEditScreenState();
 }
 
-class _AddEditScreenState extends State<AddEditScreen> {
+class _TodosAddEditScreenState extends State<TodosAddEditScreen> {
   static final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   String _task;

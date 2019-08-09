@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_starter/todos/widgets/delete_todo_snack_bar.dart';
-import 'package:flutter_starter/widgets/loading_indicator_widget.dart';
+import 'package:flutter_starter/widgets/loading_indicator.dart';
 import 'package:flutter_starter/todos/widgets/todo_item.dart';
 import 'package:flutter_starter/todos/bloc/todos_bloc.dart';
 import 'package:flutter_starter/todos/bloc/todos_event.dart';
@@ -23,7 +23,7 @@ class FilteredTodos extends StatelessWidget {
     return BlocBuilder<FilteredTodosBloc, FilteredTodosState>(
       builder: (context, state) {
         if (state is FilteredTodosLoading) {
-          return LoadingIndicatorWidget();
+          return LoadingIndicator();
         } else if (state is FilteredTodosLoaded) {
           final todos = state.filteredTodos;
           return ListView.builder(

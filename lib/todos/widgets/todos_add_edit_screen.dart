@@ -7,24 +7,6 @@ import 'package:flutter_starter/todos/bloc/todos_event.dart';
 
 typedef OnSaveCallback = Function(String task, String note);
 
-class TodosAddEditRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final todosBloc = BlocProvider.of<TodosBloc>(context);
-    return TodosAddEditScreen(
-      onSave: (task, note) {
-        todosBloc.dispatch(
-          AddTodo(Todo(task, note: note)),
-        );
-      },
-      isEditing: false,
-    );
-  }
-
-  Widget getScreen() {
-  }
-}
-
 class TodosAddEditScreen extends StatefulWidget {
   final bool isEditing;
   final OnSaveCallback onSave;

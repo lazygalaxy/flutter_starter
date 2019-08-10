@@ -12,6 +12,8 @@ class AuthRepositoryFirebase implements AuthRepository{
       : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
         _googleSignIn = googleSignin ?? GoogleSignIn();
 
+
+  //TODO: google sign in not working
   @override
   Future<FirebaseUser> signInWithGoogle() async {
     final GoogleSignInAccount googleUser = await _googleSignIn.signIn();

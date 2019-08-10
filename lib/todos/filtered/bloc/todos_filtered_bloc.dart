@@ -5,9 +5,9 @@ import 'package:flutter_starter/todos/todo.dart';
 import 'package:flutter_starter/todos/bloc/todos_bloc.dart';
 import 'package:flutter_starter/todos/bloc/todos_state.dart';
 
-import 'package:flutter_starter/filtered_todos/filtered_todos_bloc/filtered_todos_event.dart';
-import 'package:flutter_starter/filtered_todos/filtered_todos_bloc/filtered_todos_state.dart';
-import 'package:flutter_starter/filtered_todos/visibility_filter.dart';
+import 'package:flutter_starter/todos/filtered/bloc/todos_filtered_event.dart';
+import 'package:flutter_starter/todos/filtered/bloc/todos_filtered_state.dart';
+import 'package:flutter_starter/todos/filtered/visibility_filter.dart';
 
 
 class FilteredTodosBloc extends Bloc<FilteredTodosEvent, FilteredTodosState> {

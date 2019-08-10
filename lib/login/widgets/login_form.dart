@@ -89,6 +89,7 @@ class _LoginFormState extends State<LoginForm> {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 20),
+                    //TODO: use transparent logo
                     child: Image.asset('assets/lazygalaxy_logo.png', height: 200),
                   ),
                   TextFormField(

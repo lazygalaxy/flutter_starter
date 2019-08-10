@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_starter/filtered_todos/filtered_todos_bloc/filtered_todos_bloc.dart';
-import 'package:flutter_starter/filtered_todos/filtered_todos_bloc/filtered_todos_state.dart';
-import 'package:flutter_starter/filtered_todos/filtered_todos_bloc/filtered_todos_event.dart';
-import 'package:flutter_starter/filtered_todos/visibility_filter.dart';
+import 'package:flutter_starter/todos/filtered/bloc/todos_filtered_bloc.dart';
+import 'package:flutter_starter/todos/filtered/bloc/todos_filtered_event.dart';
+import 'package:flutter_starter/todos/filtered/bloc/todos_filtered_state.dart';
+import 'package:flutter_starter/todos/filtered/visibility_filter.dart';
 
 
 class FilterButton extends StatelessWidget {

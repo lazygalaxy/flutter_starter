@@ -1,5 +1,7 @@
 const String APP_NAME = 'LazyGalaxy';
+const bool isDebug = true;
 
+//TODO: some of these should be removed
 const String LOGIN = 'Login';
 const String TODOS = 'Todos';
 

@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_starter/simple_bloc_delegate.dart';
-import 'package:flutter_starter/widgets/main_screen.dart';
+import 'package:flutter_starter/main/widgets/main_screen.dart';
 import 'package:flutter_starter/auth/auth_repository_firebase.dart';
 import 'package:flutter_starter/todos/todos_repository_firebase.dart';
 

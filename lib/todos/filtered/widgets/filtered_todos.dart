@@ -3,12 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_starter/todos/widgets/delete_todo_snack_bar.dart';
-import 'package:flutter_starter/widgets/loading_indicator.dart';
+import 'package:flutter_starter/main/widgets/main_loading_indicator.dart';
 import 'package:flutter_starter/todos/widgets/todo_item.dart';
 import 'package:flutter_starter/todos/bloc/todos_bloc.dart';
 import 'package:flutter_starter/todos/bloc/todos_event.dart';
-import 'package:flutter_starter/filtered_todos/filtered_todos_bloc/filtered_todos_bloc.dart';
-import 'package:flutter_starter/filtered_todos/filtered_todos_bloc/filtered_todos_state.dart';
+import 'package:flutter_starter/todos/filtered/bloc/todos_filtered_bloc.dart';
+import 'package:flutter_starter/todos/filtered/bloc/todos_filtered_state.dart';
 
 //screens
 import 'package:flutter_starter/todos/widgets/details_screen.dart';
@@ -23,7 +23,7 @@ class FilteredTodos extends StatelessWidget {
     return BlocBuilder<FilteredTodosBloc, FilteredTodosState>(
       builder: (context, state) {
         if (state is FilteredTodosLoading) {
-          return LoadingIndicator();
+          return MainLoadingIndicator();
         } else if (state is FilteredTodosLoaded) {
           final todos = state.filteredTodos;
           return ListView.builder(
